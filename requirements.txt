@@ -1,0 +1,3 @@
+# Install the infrastructure closure with hash enforcement.
+# Install the separately generated and scanned Neon SDK wheel with --no-deps.
+-r requirements.lock

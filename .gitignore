@@ -1,0 +1,8 @@
+.venv/
+sdks/
+upload/
+Pulumi.*.yaml
+!Pulumi.yaml
+__pycache__/
+*.pyc
+.env*

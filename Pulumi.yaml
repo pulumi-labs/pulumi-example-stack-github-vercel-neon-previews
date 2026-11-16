@@ -1,0 +1,28 @@
+name: pr-previews-github-vercel-neon
+description: One Neon database branch and authenticated Vercel notes API per GitHub PR.
+requiredPulumiVersion: "=3.273.0"
+runtime:
+  name: python
+  options:
+    virtualenv: .venv
+packages:
+  neon:
+    source: terraform-provider
+    version: 1.0.1
+    parameters:
+      - registry.opentofu.org/kislerdm/neon
+      - 0.18.0
+config:
+  pr-previews-github-vercel-neon:neonProjectId:
+    description: Existing disposable-data Neon project, never production.
+  pr-previews-github-vercel-neon:parentBranchId:
+    description: Existing synthetic baseline branch in that project.
+  pr-previews-github-vercel-neon:repository:
+    description: GitHub owner/repository, used to scope names and API tokens.
+  pr-previews-github-vercel-neon:pullRequest:
+    description: Positive pull request number.
+  pr-previews-github-vercel-neon:commitSha:
+    description: Exact forty-character GitHub head commit SHA.
+  pr-previews-github-vercel-neon:apiTokenSeed:
+    secret: true
+    description: At least 32 characters of random secret material, control plane only.
