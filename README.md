@@ -257,6 +257,10 @@ service is installed.
 
 The community Neon provider is MPL-2.0; Pulumiverse Vercel is Apache-2.0. This
 example contains authored application and infrastructure source, not copied
-provider implementation. Authored-code licensing and a maintenance owner remain
-to be selected before any public release. Report problems through the reviewed
-repository's issue tracker once one exists; no public repository is asserted.
+provider implementation.
+
+This example's authored code is licensed under the [MIT License](LICENSE) and
+is provided as-is, without warranty or a support commitment. Third-party
+components retain their own licenses and notices.
+
+Report problems through this repository's issue tracker.
