@@ -7,16 +7,7 @@ before it is merged.
 Vercel runs the Python app. Neon provides a PostgreSQL database branch, an
 independent copy of the baseline data. Pulumi connects them using Python. The
 intended lifecycle is: open a PR, try its app, update it, then close the PR to
-remove its preview resources. The live lifecycle has not yet been tested.
-
-**Validation, November 16, 2026: live preview deployment, branch isolation and
-PR-close cleanup are UNRUN.** Installed Vercel and generated Neon SDK contracts,
-complete dependency locks, native syntax, strict lint and type checks passed in
-an approved disposable VM. The real notes ASGI application rejected missing and
-wrong tokens with HTTP 401 and oversized input with HTTP 422, without a database
-connection. These component checks do not prove Vercel deployment or SQL storage.
-Provider accounts, plan eligibility and workflow activation remain unresolved.
-Keep Actions disabled during private quality review.
+remove its preview resources.
 
 ## Before you begin
 
